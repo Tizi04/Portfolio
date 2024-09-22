@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(80deg, #051032, #060c1a, #040b21);
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: #040e1c;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 1px solid #527180;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background: linear-gradient(80deg, #051032, #060c1a, #040b21)
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #b74b4b;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+    color: #b74b4b;
+}
+
+.social-icons a:hover {
+    color: #040e1c;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #b74b4b;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: #040e1c;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #b74b4b;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: #b74b4b;
+    color: #040e1c;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Software Developer";
+    color: #b74b4b;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #040e1c;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    33% {
+        content: "FullStack Developer"
+    }
+
+    34%,
+    66% {
+        content: "Software Developer";
+    }
+
+    67%,
+    100% {
+        content: "Engineering Student";
+    }
+
+}
+
+
+#about {
+    background-color: #061838;
+    padding: 40px;
+    padding-left: 10%;
+    height: 550px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-wrapper{
+    padding-left: 8%;
+}
+
+.titular-secciones {
+    font-size: 28px;
+    padding-left: 20%;
+    text-align: left;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.titular-secciones::after{
+    content: '.';
+    color: aqua;
+    font-size: 40px;
+    margin-left: 2px;
+}
+
+.me {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+    padding-left: 20%;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Contenedor Flex para organizar "Education" y "Lenguajes" */
+.contenedor-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos para los lenguajes de programación */
+.lenguajes {
+    padding-right: 40%;
+    flex: 1;
+    text-align: center;
+}
+
+.lenguajes h2 {
+    font-size: 25px;
+    color: rgb(248, 248, 89);
+    margin-bottom: 10px
+}
+
+.lenguajes-box{
+    border: 1px solid #486fa5;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.lenguajes-programacion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lenguajes-programacion li {
+    display: inline-block;
+    font-size: 30px;
+    margin: 10px;
+    color: white;
+}
+
+.lenguajes-nombre{
+    font-size: 10px;
+}
+
+/* Estilos para la sección de Educación */
+.educacion {
+    padding-left: 19%;
+    flex: 1;
+    text-align: left;
+}
+
+.educacion h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.educacion-box {
+    margin-left: 1px;
+}
+
+
+.educacion h3 {
+    font-size: 12px;
+}
+
+.educacion h3::before {
+    color: aqua;
+    content: '•';
+    margin-right: 2px;
+}    
+
+.educacion p {
+    font-size: 10px;
+    color: rgb(204, 204, 204);
+    margin: 5px 0;
+}
+
+/* FORMULARIO-CAJA */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #061838;
+    gap: 70px;
+    padding: 20px;
+    color: white;
+}
+
+.datos {
+    width: 300px; 
+}
+
+.datos h2{
+    font-size: 45px;
+}
+
+.datos h2::after{
+    content: ".";
+    font-size: 35px;
+    margin-left: 2px;
+    color: aqua;
+}
+
+.text-datos{
+    font-size: 13   px;
+}
+
+.datos-mail{
+    color: rgb(219, 219, 219);
+    display: flex;
+}
+
+.datos-mail p{
+    flex: 1;
+    margin-left: 8px;
+    font-size: 11px;
+}
+
+.datos-ciudad{
+    color: rgb(219, 219, 219);
+    display: flex;
+    margin-top: 10px;
+}
+
+.datos-ciudad p{
+    flex: 1;
+    margin-left: 8px;
+    font-size: 11px;
+}
+
+/* Formulario */
+
+.form-register {
+    display: flex;
+    flex-direction: column;
+    background-color: #040e1c;
+    border-radius: 5px;
+    width: 400px;
+    height: 430px;
+    padding: 20px;
+    justify-content: space-between;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;    
+}
+
+.box-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-register label {
+   font-size: 13px;
+   margin-bottom: 10px;
+   display: flex;
+   flex-direction: column;
+}
+
+.form-register label > span {
+    color: rgb(219, 219, 219);
+    margin: 5px;
+}
+
+
+.form-register input,
+.form-register textarea {
+    color: white;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid #182a4d;
+}
+
+.name-register input {
+    height: 30px; /* Altura más fina para el input del "Name" */
+    background-color: #061634;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.name-register input::after{
+    background-color: #142e5e;
+}
+
+.form-register input[type="email"] {
+    height: 30px; /* Altura uniforme para el campo "Email" */
+    background-color: #061634;
+}
+
+.form-register textarea[name="message"] {
+    background-color: #061634;
+    height: 170px; /* Altura más alta para el campo "Message" */
+    resize: vertical; /* Permite cambiar el tamaño solo verticalmente */
+}
+
+.form-register button {
+    background-color: #0dbde9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    bottom: 1px;
+}
+
+.form-register button:hover {
+    background-color: #1990ad   ;
+}
+
+/* Lenguajes */
+
+.python{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.python:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+
+.flask{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flask:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+.sql{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sql:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+.js{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.js img{
+    border-radius: 5px;
+}
+
+.js:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+.html{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.html:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+.css{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.css:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+.github{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.github:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+
+.node{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.node:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+
+
+/* My Works */
+
+#works {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center; 
+    background: linear-gradient(80deg, #051032, #060c1a, #040b21);
+    height: 700px;
+}
+
+#works h2{
+    font-size: 28px;
+    color: white;
+    margin-bottom: 100px;
+}
+
+#works h2::after{
+    content: '.';
+    color: aqua;
+    font-size: 40px;
+    margin-left: 2px;
+}
+
+.proyects-box {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los proyectos se envuelvan en varias líneas */
+    justify-content: center; /* Centra los proyectos horizontalmente */
+    align-items: center; /* Alinea los proyectos verticalmente dentro de cada línea */
+    gap: 50px; /* Espacio entre los proyectos */
+    max-width: 700px; /* Ajusta el ancho máximo para que se acomoden 2 proyectos por fila */
+    width: 100%;
+}
+
+.proyects {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 370px;
+    background-color: #061838;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px; /* Ajusta el tamaño de fuente si es necesario */
+    text-align: center; /* Centra el texto dentro del proyecto */
+    border: 1px solid #0d2142;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 70px;
+}
+
+.proyects:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+
+.img-box{
+    height: 200px;
+}
+
+.proyects-img{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #12a5ca;
+}
+
+
+.button-box{
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center; /* Centra el botón verticalmente */
+    width: 100%;
+    height: 170px; /* Ajusta la altura según sea necesario */
+    margin-top: auto; /* Empuja el button-box hacia abajo */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.button-box h5{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #0dbde9;
+    font-size: 18px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-proyects{
+    position: absolute;
+    text-align: left;
+    color: rgb(219, 219, 219);
+    top: 55px;
+    left: 20px;
+    font-size: 12px;
+}
+
+.button-proyect{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px ;
+    background-color: #0dbde9;
+    border-radius: 4px;
+    width: 50px;
+    height: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+}
+
+.button-proyect:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #1990ad; 
+}
+
+/* RESPONSIVE */
+
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+
+}
+
+
+/* Ocultar el contenido que no es el navbar en móviles */
+@media (max-width: 995px) {
+    header {
+        padding: 1rem 2%;
+    }
+
+    .home, #about, #works, #contact {
+        display: none; /* Oculta secciones en dispositivos móviles */
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #040e1c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 101;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .logo {
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
